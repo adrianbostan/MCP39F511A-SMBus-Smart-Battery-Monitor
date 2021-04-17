@@ -28,6 +28,7 @@ The **MCP39F521** is a highly integrated, single-phase power-monitoring IC desig
 -   28-lead 5x5 QFN package
 -   Extended Temperature Range -40°C to +125°C
 -   AEC-Q100 Grade 1
+Device web page https://www.microchip.com/wwwproducts/en/MCP39F521
 
 ## Applications
 
@@ -53,3 +54,6 @@ The system can provide the standard smart battery commands:
     const unsigned int DesignVoltage          = 11100;                        // cmd 19   r     - nCell * 3700mV
     const unsigned int SpecificationInfo      = 0x0021;                       // cmd 1A   r     - bitfield
     const unsigned int SerialNumber           = 12345;                        // cmd 1C   r     - #
+
+## System Block Diagram 
+![enter image description here](https://lh3.googleusercontent.com/Ajs4Ss-s_SY_vg1gdsJ8DbFhPhGjDxqMYIotm569ERTdCx_cEReyBe_HWLupvyjOGRlqoD9Ul5bQ8LuA698H6Se84HqwQEdDTN9Sdsk1G624Zdl-RVLGw9s5iTjj1ITvmpeUx91WOmb2y3VhPDoipn4uyRgAg6xM59yk3ctaNa4QXnn5AknZnZsWo4LiCJhTfB5F9zHgW6ATDOsCwxx8Yl6alFGKFc5GKpQ4mz-GaqvMsJgMKhJhe2FZMOAUzJL81ue5z3eXkevHsdv1qiwwSMR2HyZknU4IOdvDqN6m_vzB9WgZZyo74CmtkKtV1KgBmnS2tTNmYNSW96gMtTp7jqDawp3l9Pxp-xio7qA3AkQsDSp554zNL2BoYggXR8BHVpRp726YylUQma3Dni85I7_bxYPr-U-GJyAn-q-FBT7QtJZl5uQzxo5UmFMY3R2q1IT-JpXZv9B86DEp64pyeJQmkOKxFPAbO5EAXFEhk7lQLnp-xy3uGmfiWxeKXYc-lyilW8h99tJlwSxaws-O5BoWst9b0WQKj3S-T1gyO6zyDaAIhEtBhDtysGhRN6Sk8TXvW_NsinWG4QW74Ia_PLbq0hNbdnuZEjiuIBbO-kr5wQfSHXkmF_kv1TnlSJ26-dGyyiDEkEvhAJyVwxuDwoZavT9_37U_sjdMnVS6S8qiqAZuYTf9lOah5VRhc3LttWwjIBopvWvfeCpzYmSAW_ax=w1055-h808-no?authuser=0)

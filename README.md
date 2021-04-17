@@ -72,34 +72,29 @@ The system can provide the standard smart battery commands:
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/Untitled%20Diagram%281%29.png)
 
 ## Application Block Diagram 
-
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/use%20block%20diag.png)
 
 ## PCB
 
 The PCB design its done in Altium designer.
-
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/board.png)
 
-## TOP
-
+TOP
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/top.png)
+
 BOTTOM
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/btm.png)
 
 ## Schematics
-Microcontroller
 
+Microcontroller
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/sch_pg1.png)
 
 MCP39F511A
-
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/sch_pg3.png)
 
 Buck Regulator
-
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/sch_pg4.png)
 
 USB
-
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/sch_pg2.png)

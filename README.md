@@ -28,6 +28,8 @@ The **MCP39F521** is a highly integrated, single-phase power-monitoring IC desig
 -   28-lead 5x5 QFN package
 -   Extended Temperature Range -40°C to +125°C
 -   AEC-Q100 Grade 1
+
+
 Device web page https://www.microchip.com/wwwproducts/en/MCP39F521
 
 ## Applications

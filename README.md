@@ -50,10 +50,10 @@ Battery data reporting in Mission Planner
 ![enter image description here](https://lh3.googleusercontent.com/hcL6z32l4YAc2mXp1lRe-uz-v7Su1y8u6KC85UWVEVa2h-mTP8tP8_Yr1OnQzo8a2IyKg1VMdzUMCdkijQlNhCU0yPWmhL33xeFpH7a7uBdMMz_tRICi-dvyxnP0DDylh35PQnCFl60mTG2XjByv4Qli2t6q900__D6xdWrOWyZQZdKO7zM_tFJhuQe06LKGHuJatR3tXRFOFjUtTWwS1DIstCho5Xoz_FHmOcj1dVUWz1azOfiUONmOsL_i_5rTZ7WTMRXeH9sP3GqeXYw1sPjtdb9DBtcg-om1B6oxMkscEvvuzQSTrLD-NZQRyu-2-7NognPl_X5dV5sD_S0Jai_J_aSO8NOHEJVnFFphHFaoQKyY15fqkSwAvkb8-c8YipZhLy75yid7pzNplYG0E-p7USjREm0Al7NKdbD5wIMpE1cv0AgFisqb7SkHwfYYluO2STIA-kzLQgiWZRKRG38QT0zo8B5esi76KOeh-uHfz7SQ7MU0d5Ln2dgTNY0b-8BjsTX0TIBBSyPbv4L0qBYSE3ME6PcoJj6SK71nKDl83wb6lgiEU1xNynSRFNRW7vpk_mDQLEjSemAyzN6C3FQizCwogOTMK9zaPpyH_K0KxfNqvc5UT8P0spnnQJPfTamQe6bQoc1ysl-6Wmv5NA-OSXF4PPYKZTu6CdivQMBtUmi3RDi1pf2AEfixdiAprrH7trKxJpnbQ4srLOLTSRKQ=w1834-h1268-no?authuser=0)
 The system can provide the standard smart battery commands:
 
-    const unsigned int Temperature            = (25+273.5)*10;                // cmd 08   r     - 10*°K
+    const unsigned int Temperature            = 0;                            // cmd 08   r     - °C
           unsigned int Voltage                = 0;                            // cmd 09   r     - mV
             signed int Current                = 0;                            // cmd 0A   r     - mA
-            signed int AverageCurrent         = 0;                            // cmd 0B   r     - 1 minute average current
+            signed int AverageCurrent         = 0;                            // cmd 0B   r     - average current for 60 sec
           unsigned int RelativeStateOfCharge  = 0;                            // cmd 0D   r     - %
           unsigned int AbsoluteStateOfCharge  = 0;                            // cmd 0E   r     - %
           unsigned int RemainingCapacity      = 0;                            // cmd 0F   r     - mAh
@@ -61,23 +61,31 @@ The system can provide the standard smart battery commands:
           unsigned int RunTimeToEmpty         = 0;                            // cmd 11   r     - min
           unsigned int AverageTimeToEmpty     = 0;                            // cmd 12   r     - min
           unsigned int AverageTimeToFull      = 0;                            // cmd 13   r     - min
-    const unsigned int ChargingCurrent        = 2000;                         // cmd 14   r     - mA
-    const unsigned int ChargingVoltage        = 12600;                        // cmd 15   r     - nCell * 4200mV
-          unsigned int BatteryStatus          = 0;                            // cmd 16   r     - bitfielf
+    const unsigned int ChargingCurrent        = 4000;                         // cmd 14   r     - mA
+    const unsigned int ChargingVoltage        = 4200;                        // cmd 15   r     - nCell * 4200mV
+          unsigned int BatteryStatus          = 0;                            // cmd 16   r     - status
           unsigned int CycleCount             = 10;                           // cmd 17   r     - #
-    const unsigned int DesignCapacity         = 4400;                         // cmd 18   r     - mAh
+    const unsigned int DesignCapacity         = 9000;                         // cmd 18   r     - mAh
     const unsigned int DesignVoltage          = 11100;                        // cmd 19   r     - nCell * 3700mV
-    const unsigned int SpecificationInfo      = 0x0021;                       // cmd 1A   r     - bitfield
+    const unsigned int SpecificationInfo      = 0x0021;                       // cmd 1A   r     - user
     const unsigned int SerialNumber           = 12345;                        // cmd 1C   r     - #
 
 ## System Block Diagram 
-![enter image description here](https://lh3.googleusercontent.com/Ajs4Ss-s_SY_vg1gdsJ8DbFhPhGjDxqMYIotm569ERTdCx_cEReyBe_HWLupvyjOGRlqoD9Ul5bQ8LuA698H6Se84HqwQEdDTN9Sdsk1G624Zdl-RVLGw9s5iTjj1ITvmpeUx91WOmb2y3VhPDoipn4uyRgAg6xM59yk3ctaNa4QXnn5AknZnZsWo4LiCJhTfB5F9zHgW6ATDOsCwxx8Yl6alFGKFc5GKpQ4mz-GaqvMsJgMKhJhe2FZMOAUzJL81ue5z3eXkevHsdv1qiwwSMR2HyZknU4IOdvDqN6m_vzB9WgZZyo74CmtkKtV1KgBmnS2tTNmYNSW96gMtTp7jqDawp3l9Pxp-xio7qA3AkQsDSp554zNL2BoYggXR8BHVpRp726YylUQma3Dni85I7_bxYPr-U-GJyAn-q-FBT7QtJZl5uQzxo5UmFMY3R2q1IT-JpXZv9B86DEp64pyeJQmkOKxFPAbO5EAXFEhk7lQLnp-xy3uGmfiWxeKXYc-lyilW8h99tJlwSxaws-O5BoWst9b0WQKj3S-T1gyO6zyDaAIhEtBhDtysGhRN6Sk8TXvW_NsinWG4QW74Ia_PLbq0hNbdnuZEjiuIBbO-kr5wQfSHXkmF_kv1TnlSJ26-dGyyiDEkEvhAJyVwxuDwoZavT9_37U_sjdMnVS6S8qiqAZuYTf9lOah5VRhc3LttWwjIBopvWvfeCpzYmSAW_ax=w1055-h808-no?authuser=0)
+![enter image description here](https://lh3.googleusercontent.com/nfrRgmDpWArEZyKCqp56XCvQEb8YLTjk311lAF-9KTVOoLHCybbQCt4Gp0QiAcUMQO0m9Y9CEkIWEDdodZbueM5s8twYw3EhHnEBz-cypKiFNXePmYkJRBnyDVswa_BuvIPQL80JcJxGzYxEFiw6Pn0vBqQOgOznodHR9tf3NdyQh5yWdnjKgCETpPf-ctZdyVy7ImQgH4NyK7Jt69VEJ9luRyIH2Qoq0eo6IrZcFbj3fqAhQCt4UN2x6pTz7BEZ7KgKfrW_vacdC8l-r5AkF_2ivZwJXE7i0ARP2ga5neRCIa2m1I07tp6uyfrv7z9X0wdQDZM7CJM70GdfZl6WFoFxzvCSf_SCvJahmNEUlSQoO6n22N0XUNu4vmhxn-30Dr00B_xZ0gqaAwcFRs2rczKQbU15Z3tDJKognfqB1A9r-wMcASAMEbRgdg3rNH1FMsZl2HDjMhtaW4W-IJd5-Obj3osu6AcYGn68IH3UyQYj3-24yCvnnAA07AHNfiMxxelSVnPaw-AzV2jzvkqdmtLrpSpmwddrMVBxRcrY2FA3zZBi8LdEhlRhW5o_JE4_L6Y_XjObBQv2D70YOpnCLrbp7rvi5vDD1jXDJksEqsMuZtHWvimPGflz341RZ2a5Q1n3xbqI87AmG2Lsxtv-7pDxe2fKZk7m0JzykRWY_JDa0Fw9or5dWU1lTQEyOyHnEAat772VmuGpi53au52L_RsM=w1055-h808-no?authuser=0)
+
+## Application Block Diagram 
+
+
 
 ## PCB
 
 The PCB design its done in Altium designer.
 
 ![enter image description here](https://lh3.googleusercontent.com/Inny6Rmvvf0m7qI5NzU4f-6bc4WiuC_tW0TJT-wi3_VeKG1nn7TIgDNy4kCZNQuXjgsIBpZeTB_FxmBoI4RloEczqI8ZF5iHU1IWLeGLQN7i9x_bajdC9R54vAHWiUMYzg8N9qbkvoBzFDQcEqKUZttaTfVJN2GFjP1ZiV5KQ7LautGzyS0qeRmKqKJtJkxkT5-gsmcvmUxoEw0tm6syPitnR0MN0PGUP9r01ozemO-JS6V6NV_FJS0d-4Kz3zjmrA6jkpK5ReXr_uGfcAGlGXRt02loo2mbVI_ZL4kHQwP3eAOnxz6EOzmyDwtW6bjm6NvaRXlJ3rKsoIOJhGolH0s4-Z-uZc89oMOy0ck9Oz4TPrPP_MiNWRMcF16M-2ZuLLysi8o4kbqnHw40vNUrgjQHTQTQ_da0aB5saOhglsN-ifu0dg5DnDTJ6dvyasGPixPBfU0bLjVa61xWQhEhq2Fblyqid-zV5QNJ60OX27c6_8idUUEDptB7be9dfE62gTG0GF8BapZfAtnQBvwR9lGLIXwRi9pvq4yVGH21567V4AE5vw07MAIErqIsrVUcWSUDtueVocSwyizqIX5hYU2luGurq2PiK7ayoGM5L-IKYEmEu0vQBjFs7kELH6Rml59u3bKCyTOD9WKHzUJ4dlIfc0j48A6MQ0Iw3NENY5PAz7mirUMMpPSLrKI5LZB6qpvQXv-0Q6Syn04t4otKG7Z7=w1176-h850-no?authuser=0)
+TOP
+![enter image description here](https://lh3.googleusercontent.com/0sR9tUNKSVFZ6ngiYEknXE-KwPa7t5PO1uAQQ_g4ya1COkfoZOUy0oj9Js52t1xWhz2JlhvSx76p3RtglKbGnLkOzIt9pv1MPGV5Sxdj8ryAw51JZnaTyrq91bXKyyIfq2Vq7k-_8rFRcX5o0eIySgb4kRB_VlrbDvTnj-8xJ5zTTyW8rrqgl9GSxv1urxdUn-I_fg64qsgv1Sfoakg4y-vUiON9J4Gc8i1RsK75fjf_lc8nJtbX_lxdqmw2s2HDFys-jbpBDwfSzt3Z6XyVjGvqqiSYgrNp9Pt4FYDQDMLRxmLuCcQi7piRM-tGrdP2lefcoJxhz1gbRHrxdan3rSVsXHlCxucOXOLNjBoY9zJRqgWjYWKRm0gVOu4Tc3VgzCe99qazKBEsE0MHOvvQvP7oYFsplXRfRddjTs0aNSwyK9Lgl-W60Xeey_xyr5JUM6A7QJc5QbhUCxaDCPgB9_Ertab9Cb_sGdz1uXuKHu1L4wNiFVXbqhgbUvmlw5LsnTnLnT7vytRMTtdHi6aEkxmndAlLbTQ9H0cNnrnbpBNgTXz8Or9psKIR4NS1KITmzkdPrevvzd4RhDdAe7073JrpFBXhIbN1CyZ7O95SMAapovqWK0KeSTW4G_I1wW1bmSzPG_bIP2SE10cQsAgCM4BiVJYsTgiDm7wfHF0GOCfiDjttPuf9CsdA2fxgVI1oc1zswRgp59O-00uM6rDWpwVS=w1918-h937-no?authuser=0)
+BOTTOM
+![enter image description here](https://lh3.googleusercontent.com/rPR1jMwrJ2FJ34PbIamnCQ8-TPfeDdgksoXUgEFM9N8Z4wVGwKos3V2guCtpA-zUaferPNvGgB86Hb7ek1Z0SlTtT05s_ZU7YeKQvc_JTx-5m26-6OzR4qa0dT-AjNoxIqeIUtzb-AaNCtleHNBelAL5BRQ6UEw5eMZDgkz3He_v-_PBoI_h6sKH4izuwBofXf69GKJzJzbUBwjKVEuZfrHIk_ZVW0S9TtgYAitPvASqvV4MqvVqKw7pTYErn4JEfpdK7ykFOWSgUcLWRRoDKDtKFwoAQjHxntq_P6783kVtnDwRAiT93_qt91tH7AyhaaK-38fOPRLQUJVnrUqkipA9xwIHdyCWz7Rt6e5YknqrWHCuiXsYi3f_AHSDx8wd86lKlHUTTEKjYW6KfO7yG5RCnFaCLioicc4J1AsBQ0juU58NbK36MBBQ9KG41-2WRk1PLKxU60ct7Iwe-s1KFMT3Ngzak5NtZQ31FriVmfsf52eoBBRGu7we4xRk3QrTyHFt13FySNwyCRAPXgpSUfZtm450nAbYbq_8sOQ_ccbKzFwzgJuKQqXhel4UCpRDEQlht7-Blf93ex0187YSKkbOAJ5kAp0kbFOeYn9ITF1kcpZL9H6YmtXSr4rR_VcT3zI5oGp4ag0itBFo6-Vl1kX_znmLpBHDXUOlcnY6Ymv4Xlth9WUJUXwaPU6o3muWVlhkwsSkzLH7p-ROczdZqT4S=w1918-h934-no?authuser=0)
 
 ## Schematics
 Microcontroller

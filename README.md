@@ -1,8 +1,7 @@
 # MCP39F511A-SMBUS-Battery-Monitor
 
 This is a smart battery monitor based on Microchip 24-Bit Single Phase AC/DC Power Monitoring IC-**MCP39F511A**.
-It is intended to be used in systems with **SMBUS** communication like **DJI** smart batteries, **Ardupilot** systems and any other system that need a smart battery.
-The system can provide the standar smart battery commands:
+
 
 
 ## MCP39F511A Features
@@ -37,7 +36,7 @@ Device web page https://www.microchip.com/wwwproducts/en/MCP39F521
 
 ## Applications
 
-   It is intended to be used in systems with SMBUS communication like DJI smart batteries, ardupilot systems and any other system that need a smart battery.
+   It is intended to be used in systems with **SMBUS** communication like **DJI** smart batteries, **Ardupilot** flight controller systems and any other system that need a smart battery.
    
 SMBUS specification http://smbus.org/specs/
 
@@ -75,7 +74,7 @@ The system can provide the standard smart battery commands:
 
 ## Application Block Diagram 
 
-
+![enter image description here](https://lh3.googleusercontent.com/DRrNh55AveYvC-94fU-31DCoUqkRBPB8UTMdCdU7ND902tVJEhDFkg43Dc6Bc1atgFdoPf5TVL1H_UeL5eVNndZsQXybrotDiFZ8bH8874Lh9UvqZgNAY723LVcLeZqs4t8z3GmMDSTV3qTFXqYnJB7F2xriXrzmw-EHvE8fCHHicjIhoM2yC64nnVO_yJ1KoxgYxK-RZLn5eTp1hANRHa1rPthQHEoM5xwlJ6lWbmczDNknfky2wl4o6tAlUhyUECrrZQJDYMZkjGLF9PCyQd7VVUIq94aQ2VljQ8d65HTChVENfD-XHHWvk9i4viuUDNxH40ZIsCBYgdE2Sh8uMJuKohaWXsnseKRklLprJdB4gdlr8t3D_WOzMpkZVv6Yd2ZjC_L1ZlJqSAq6fLjPUQaTuAh7LZCGzeZKulj3PucyChBGsq_76ntG2GIjk6uTX9QfDfn998xeNLod0HHS6lUHeKncppxoXoAa93nLtFQpl_E_njTRceHfqY4G5QieuBK9cBXg67qW7lnW3SBcIEudWxqm3CptJsSXz-Jaom53rnqeMpNTHrmgPF1u31HCn2UUwucga6jqSNYs4G895lEsY7ClQZhmlpbVRyzlokqENlMLG-BG6u2xF79fBgVJIiJK3LlmrxiwCq22MzxGAMHFEPLwELIcDV8-lGDhM6G1G7vEdhgLtT1xeH9WqpY_rKqeMvsf0t8KaLdJY7QB74HL=w1918-h887-no?authuser=0)
 
 ## PCB
 

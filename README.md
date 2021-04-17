@@ -7,7 +7,7 @@ This is a smart battery monitor based on Microchip 24-Bit Single Phase AC/DC Pow
 ## MCP39F511A Features
 
 
-The MCP39F511A device is a highly-integrated, complete single-phase power-monitoring IC designed for real-time measurement of input power for AC and DC power supplies, making it suitable for a wide range of consumer and industrial applications. It is capable of detecting the input voltage types in order to select DC or AC mode automatically. It includes dual-channel Delta-Sigma ADCs, a 16-bit calculation engine, EEPROM and a flexible 2-wire interface. Separate AC and DC calibration registers are provided, to ensure high-accuracy measurements in both modes. An integrated low-drift voltage reference with 7 ppm/°C in addition to 94.5 dB of SINAD performance on each measurement channel allows for better than 0.1% accurate designs across a 4000:1 dynamic range.
+The **MCP39F511A** device is a highly-integrated, complete single-phase power-monitoring IC designed for real-time measurement of input power for AC and DC power supplies, making it suitable for a wide range of consumer and industrial applications. It is capable of detecting the input voltage types in order to select DC or AC mode automatically. It includes dual-channel Delta-Sigma ADCs, a 16-bit calculation engine, EEPROM and a flexible 2-wire interface. Separate AC and DC calibration registers are provided, to ensure high-accuracy measurements in both modes. An integrated low-drift voltage reference with 7 ppm/°C in addition to 94.5 dB of SINAD performance on each measurement channel allows for better than 0.1% accurate designs across a 4000:1 dynamic range.
 
 Additional Features
 
@@ -38,13 +38,13 @@ Device web page https://www.microchip.com/wwwproducts/en/MCP39F521
 
    It is intended to be used in systems with **SMBUS** communication like **DJI** smart batteries, **Ardupilot** flight controller systems and any other system that need a smart battery.
    
-SMBUS specification http://smbus.org/specs/
+**SMBUS** specification http://smbus.org/specs/
 
 A practical example it's given with ardupilot flight controller https://ardupilot.org/copter/docs/common-smart-battery-landingpage.html
 
-Choosing the smart battery type in Mission Planner 
+Choosing the smart battery type in **Mission Planner** 
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/ardupilot.png)
-Battery data reporting in Mission Planner
+Battery data reporting in **Mission Planner**
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/ardupilot_battery.png)
 The system can provide the standard smart battery commands:
 

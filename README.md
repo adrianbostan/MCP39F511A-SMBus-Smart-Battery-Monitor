@@ -32,7 +32,7 @@ Additional Features
 -   Extended Temperature Range -40°C to +125°C
 -   AEC-Q100 qualified
 
-Device web page https://www.microchip.com/wwwproducts/en/MCP39F521
+Device web page https://www.microchip.com/wwwproducts/en/MCP39F511A
 
 ## Applications
 

@@ -34,15 +34,15 @@ Device web page [here](https://www.microchip.com/wwwproducts/en/MCP39F511A).
 ## Real life use
 
 ***So, why do you need a smart battery monitor ?***
-A standard "dumb" **LiPo** battery has no capability to measure the state of charge and no over-voltage and under-voltage protection, individual cell voltage measurement. In order to measure the **energy** stored in the battery an accurate **ADC** will be needed. To satisfy this need **[MCP39F511A](https://www.microchip.com/wwwproducts/en/MCP39F511A)** was chosen because his Power Monitoring Accuracy capable of 0.1% error across 4000:1 dynamic range.
+A standard "dumb" **LiPo** battery has no capability to measure the state of charge and no over-voltage and under-voltage protection, individual cell voltage measurement. In order to measure the **energy** stored in the battery an accurate **ADC** will be needed. To satisfy this need, **[MCP39F511A](https://www.microchip.com/wwwproducts/en/MCP39F511A)** was chosen, because his Power Monitoring Accuracy is capable of 0.1% error across 4000:1 dynamic range.
 
-The smart battery monitor it is currently active used in an Ardupilot plane [Phoenix 2400](https://youtu.be/dB9bPAioCqw)
+The smart battery monitor it is currently active used in an Ardupilot plane [Phoenix 2400](https://youtu.be/dB9bPAioCqw).
 You can watch a complete video filmed with the plane [here](https://youtu.be/U9w5WwQXY4I).
 
 
 ## Applications
 
-   It is intended to be used in systems with **[SMBus](http://smbus.org/specs/)** communication like **DJI** smart batteries, **Ardupilot** flight controller systems and any other system that need a smart battery.
+   It is designed to be used in systems with **[SMBus](http://smbus.org/specs/)** communication like **DJI** smart batteries, **Ardupilot** flight controller systems and any other system that need a smart battery.
    
 **[SMBus](http://smbus.org/specs/)** specification.
 
@@ -53,7 +53,7 @@ Choosing the smart battery type in **Mission Planner**
 Battery data reporting in **Mission Planner**
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/ardupilot_battery.png)
 ## Firmware
-The firmware it's currently under development, it is free to be improved, it support basic functions for SMBus communication with flight controller. It is Arduino based and fully opensource. 
+The firmware it's currently under development and it is free to be improved. It supports basic functions for SMBus communication with flight controller. It is Arduino based and fully opensource. 
 
 ## Supported commands
 
@@ -87,7 +87,7 @@ The system can provide the standard smart battery commands:
 
 ## PCB
 
-The PCB design its done in Altium designer.
+The PCB design it's done using Altium designer.
 ![enter image description here](https://raw.githubusercontent.com/catkiller007/MCP39F521-SMBUS-Battery-Monitor/main/Pictures/board.png)
 
 TOP

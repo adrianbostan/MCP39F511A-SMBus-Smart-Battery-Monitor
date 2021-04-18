@@ -51,6 +51,27 @@ uint8_t F511A_current_sign;
 uint8_t F511A_active_power_sign;
 uint8_t F511A_eng_cnt_erase = F511A_CNT_ERASE_ENABLE;
 
+
+const unsigned int Temperature            = 0;           // cmd 08   r     - °C
+      unsigned int Voltage                = 0;           // cmd 09   r     - mV
+        signed int Current                = 0;           // cmd 0A   r     - mA
+        signed int AverageCurrent         = 0;           // cmd 0B   r     - avg current for 60 sec
+      unsigned int RelativeStateOfCharge  = 0;           // cmd 0D   r     - %
+      unsigned int AbsoluteStateOfCharge  = 0;           // cmd 0E   r     - %
+      unsigned int RemainingCapacity      = 0;           // cmd 0F   r     - mAh
+      unsigned int FullChargeCapacity     = 0;           // cmd 10   r     - mAh
+      unsigned int RunTimeToEmpty         = 0;           // cmd 11   r     - min
+      unsigned int AverageTimeToEmpty     = 0;           // cmd 12   r     - min
+      unsigned int AverageTimeToFull      = 0;           // cmd 13   r     - min
+const unsigned int ChargingCurrent        = 4000;        // cmd 14   r     - mA
+const unsigned int ChargingVoltage        = 4200;        // cmd 15   r     - nCell * 4200mV
+      unsigned int BatteryStatus          = 0;           // cmd 16   r     - status
+      unsigned int CycleCount             = 10;          // cmd 17   r     - #
+const unsigned int DesignCapacity         = 9000;        // cmd 18   r     - mAh
+const unsigned int DesignVoltage          = 11100;       // cmd 19   r     - nCell * 3700mV
+const unsigned int SpecificationInfo      = 0x0021;      // cmd 1A   r     - user
+const unsigned int SerialNumber           = 12345;       // cmd 1C   r     - #
+
 void requestEvent(void){
   switch (register_to_call) {
     case 0x0A: //current request
@@ -208,7 +229,7 @@ void loop()
             
      
 
-    Serial.println(F511A_active_power_sign);
+    Serial.println(temperature);
  
     
  }

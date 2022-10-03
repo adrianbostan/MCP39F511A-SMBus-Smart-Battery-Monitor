@@ -7,7 +7,7 @@ This is a smart battery monitor based on Microchip 24-Bit Single Phase AC/DC Pow
 ## MCP39F511A Features
 
 
-The **[MCP39F511A](https://www.microchip.com/wwwproducts/en/MCP39F511A)** device is a highly-integrated, complete single-phase power-monitoring IC designed for real-time measurement of input power for AC and DC power supplies, making it suitable for a wide range of consumer and industrial applications. It is capable of detecting the input voltage types in order to select DC or AC mode automatically. It includes dual-channel Delta-Sigma ADCs, a 16-bit calculation engine, EEPROM and a flexible 2-wire interface. Separate AC and DC calibration registers are provided, to ensure high-accuracy measurements in both modes. An integrated low-drift voltage reference with 7 ppm/°C in addition to 94.5 dB of SINAD performance on each measurement channel allows for better than 0.1% accurate designs across a 4000:1 dynamic range.
+The **[MCP39F511A](https://www.microchip.com/en-us/product/MCP39F511A?utm_source=GitHub&utm_medium=TextLink&utm_content=MSLD&utm_campaign=MCP39F511A)** device is a highly-integrated, complete single-phase power-monitoring IC designed for real-time measurement of input power for AC and DC power supplies, making it suitable for a wide range of consumer and industrial applications. It is capable of detecting the input voltage types in order to select DC or AC mode automatically. It includes dual-channel Delta-Sigma ADCs, a 16-bit calculation engine, EEPROM and a flexible 2-wire interface. Separate AC and DC calibration registers are provided, to ensure high-accuracy measurements in both modes. An integrated low-drift voltage reference with 7 ppm/°C in addition to 94.5 dB of SINAD performance on each measurement channel allows for better than 0.1% accurate designs across a 4000:1 dynamic range.
 
 Additional Features
 
@@ -34,7 +34,7 @@ Device web page [here](https://www.microchip.com/wwwproducts/en/MCP39F511A).
 ## Real life use
 
 ***So, why do you need a smart battery monitor ?***
-A standard "dumb" **LiPo** battery has no capability to measure the state of charge and no over-voltage and under-voltage protection, individual cell voltage measurement. In order to measure the **energy** stored in the battery an accurate **ADC** will be needed. To satisfy this need, **[MCP39F511A](https://www.microchip.com/wwwproducts/en/MCP39F511A)** was chosen, because his Power Monitoring Accuracy is capable of 0.1% error across 4000:1 dynamic range.
+A standard "dumb" **LiPo** battery has no capability to measure the state of charge and no over-voltage and under-voltage protection, individual cell voltage measurement. In order to measure the **energy** stored in the battery an accurate **ADC** will be needed. To satisfy this need, **[MCP39F511A](https://www.microchip.com/en-us/product/MCP39F511A?utm_source=GitHub&utm_medium=TextLink&utm_content=MSLD&utm_campaign=MCP39F511A)** was chosen, because his Power Monitoring Accuracy is capable of 0.1% error across 4000:1 dynamic range.
 
 The smart battery monitor it is currently active used in an Ardupilot plane [Phoenix 2400](https://youtu.be/dB9bPAioCqw).
 You can watch a complete video filmed with the plane [here](https://youtu.be/U9w5WwQXY4I).

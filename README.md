@@ -2,7 +2,9 @@
 
 This is a smart battery monitor based on Microchip 24-Bit Single Phase AC/DC Power Monitoring IC-**MCP39F511A**.
 
+Device web page **[here](https://www.microchip.com/en-us/product/MCP39F511A?utm_source=GitHub&utm_medium=TextLink&utm_content=MSLD&utm_campaign=MCP39F511A)**.
 
+Microchip solutions and products for Power and Energy Management **[here](https://www.microchip.com/en-us/products/data-converters/ac-dc-power-and-energy-devices?utm_source=GitHub&utm_medium=TextLink&utm_content=MSLD&utm_campaign=MCP39F511A)**
 
 ## MCP39F511A Features
 

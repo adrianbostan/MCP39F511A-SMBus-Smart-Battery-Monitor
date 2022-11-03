@@ -32,7 +32,7 @@ Additional Features
  -  Extended Temperature Range -40°C to +125°C
  - AEC-Q100 qualified
 
-Device web page [here](https://www.microchip.com/wwwproducts/en/MCP39F511A).
+Device web page [here](https://www.microchip.com/en-us/product/MCP39F511A?utm_source=GitHub&utm_medium=TextLink&utm_content=MSLD&utm_campaign=MCP39F511A).
 ## Real life use
 
 ***So, why do you need a smart battery monitor ?***
